@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @honor.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @honor.image_url %>
+</p>
+
+<p>
+  <strong>Requirements:</strong>
+  <%= @honor.requirements %>
+</p>
+
+<%unless @honor.category.nil? %>
+	<strong>Categoría:</strong>
+	<p><% = @honor.category.name%></p>
+
+<%= link_to 'Edit', edit_honor_path(@honor) %> |
+<%= link_to 'Back', honors_path %>
